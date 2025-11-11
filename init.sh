@@ -3,6 +3,14 @@
 # -----------------------------
 # 🔧 Laravel-Projekt Setup Tool
 # -----------------------------
+REPO_URL="git@github.com:<user>/laravel-docker-init.git"
+
+if [ ! -d "./templates" ]; then
+  echo "📦 Lade Vorlagen aus Git-Repo..."
+  git clone --depth=1 "$REPO_URL" ./_initrepo >/dev/null 2>&1
+  mv ./_initrepo/templates ./templates
+  rm -rf ./_initrepo
+fi
 
 if [ -z "$1" ]; then
   echo "❌ Bitte gib einen Projektnamen an: ./init.sh <projektname>"

@@ -1,6 +1,6 @@
 #!/bin/sh
 # =============================================
-# 🚀 AvatarVault Startup Banner
+# 🚀 Startup Banner
 # =============================================
 
 # ASCII Logo
