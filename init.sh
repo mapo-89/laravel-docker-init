@@ -130,8 +130,8 @@ services:
     container_name: ${CONTAINER_NAME}
     volumes:
       - ${SRC_PATH}:/var/www/${PROJECT}
-      - ${PROJECT_PATH}/docker/php/entrypoint.sh:/usr/local/bin/entrypoint.sh:ro
-      - ${PROJECT_PATH}/docker/php/banner.sh:/usr/local/bin/banner.sh:ro
+      - ${PROJECT_PATH}/docker/php/entrypoint.sh:/usr/local/bin/entrypoint.sh
+      - ${PROJECT_PATH}/docker/php/banner.sh:/usr/local/bin/banner.sh
     environment:
       PROJECT: ${PROJECT}
     networks:
