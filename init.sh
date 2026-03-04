@@ -57,7 +57,7 @@ WORKDIR /var/www/${PROJECT}
 
 RUN apt-get update && apt-get install -y \\
     git unzip zip curl libpng-dev libonig-dev libxml2-dev mariadb-client \
-    && docker-php-ext-install pdo pdo_mysql mbstring exif pcntl bcmath gd \
+    && docker-php-ext-install pdo pdo_mysql mbstring exif pcntl bcmath gd zip \
     && php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');" \
     && php composer-setup.php \
     && php -r "unlink('composer-setup.php');" \
